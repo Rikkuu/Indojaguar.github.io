@@ -7,69 +7,57 @@ body {
 }
 
 .container {
-    display: grid;  
-    grid-template-rows: 900px 1fr;
+    height: 945px;
+    display: grid;
+    grid-template-rows: 5fr 0.5fr;
     grid-template-areas:
-        'atas'
-        'bawah';
+        'main'
+        'foot';
 }
 
 main {
-    grid-area: atas;
+    grid-area: main;
     display: grid;
     place-items: center;
 }
 
-.box {
+.boxcard {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 45% auto;
+    grid-template-areas:
+        'header'
+        'data';
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.boxcard .header {
+    background-color: rgba(36,0,0,1);
     display: grid;
     place-items: center;
 }
 
-.wrapper {
-    background-color: rgba(255, 255, 255, .1);
-    width: 300px;
-    height: 100px;
-    align-content: center;
-    padding: 10px;
-    border-radius: 10px;
-    place-items: center;
-    color: rgb(66, 66, 66);
-    text-align: center;
+.header img {
+    border-radius: 50%;
+}
+
+.data {
+    display: block;
+    padding: 20px;
+    color: white;
+}
+
+.boxcard:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    grid-area: bawah;
     display: grid;
     place-items: center;
-}
-
-.wrapper a, p {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-.wrapper a:hover, p:hover {
-    color: rgb(184, 92, 92);
-}
-
-.wrapper:hover {
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
-    animation: besar 500ms;
-    transform: scale(1.05);
-}
-
-.copy a {
-    text-decoration: none;
     color: rgba(255, 255, 255, 0.3);
-}
-
-@keyframes besar {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        box-shadow: 0 0 10px rgba(0,0,0,.1);
-        transform: scale(1.05);
-    }
 }
