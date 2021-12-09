@@ -61,3 +61,8 @@ footer {
     place-items: center;
     color: rgba(255, 255, 255, 0.3);
 }
+
+footer a.footer {
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+}
